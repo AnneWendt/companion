@@ -2,6 +2,8 @@
 
 if screen -ls | grep video; then
         screen -X -S video quit
+        screen -X -S video_1 quit # added
+        screen -X -S video_2 quit # added
 fi
 
 # this is followed up in start_video.sh
@@ -17,3 +19,4 @@ else
 fi
 
 sudo -H -u pi screen -dm -S video /home/pi/companion/tools/streamer.py
+
